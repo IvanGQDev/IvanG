@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Gomez </title>
+    <!-- CSS Boostrap-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+    function copyToClipboard() {
+        var email = document.getElementById('email').innerText;
+        var dummy = document.createElement('input');
+        document.body.appendChild(dummy);
+        dummy.value = email;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+
+        var copyAlert = document.getElementById('copyAlert');
+        copyAlert.style.display = 'block';
+        setTimeout(function() {
+            copyAlert.style.display = 'none';
+        }, 1500);
+    }
+    </script>
+</head>
+<header>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="background-color: #222222;">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel" style="color: #ffffff; margin-left:14px ;">Menu</h5>
+            <button type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active menu" aria-current="page" href="#ivang">Ivan G</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active menu" aria-current="page" href="#about-me">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active menu" aria-current="page" href="#work-experience">Work Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active menu" aria-current="page" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active menu" aria-current="page" href="#education">Education and Certificates</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active menu" aria-current="page" href="#contactme">Contact Me</a>
+                </li>
+                <li>
+                    <div class="iconos">
+                        <div class="col-lg-12 text-center">
+                            <a class="siguiente" href="https://github.com/IvanGQDev" target="_blank"><i class="fab fa-github fa-2x" ></i></a>
+                            <a class="siguiente" href="https://www.linkedin.com/in/ivan-gomez-89ba12276/" target="_blank" style="margin-left: 20px;"><i class="fab fa-linkedin fa-2x" ></i></a>
+                    
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button class="btn btn-dark col-lg-12" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" style="background-color: #222222;">Menu</button>
+     
+    <!-- Header content goes here -->
+</header>
+<br>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-color: #010101; 
+        color: #EDE8E4;
+        /*background-image: url('./Images/new_fondo_jpg.jpg'); */
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left:0;
+        opacity:0.9 ;
+        width: 100%;
+        text-shadow: -2px 0 rgb(0, 0, 0), 0 2px rgb(0, 0, 0), 2px 0 rgb(0, 0, 0), 0 -2px rgb(0, 0, 0);
+    }
+
+    .iconos {
+        margin-top: 570px;
+    }
+
+    .offcanvas {
+        height: 100vh; /* This will make the offcanvas cover 100% of the screen height */
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000; /* This ensures the header stays on top of other elements */
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    html {
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #888 #202020; /* For Firefox */
+    }
+
+    /* This will change the scrollbar for Chrome, Edge, and Safari */
+    body::-webkit-scrollbar {
+        width: 15px; /* width of the entire scrollbar */
+    }
+
+    body::-webkit-scrollbar-track {
+        background: #202020; /* color of the tracking area */
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: #888; /* color of the scroll thumb */
+        border-radius: 20px; /* roundness of the scroll thumb */
+        border: 3px solid #202020; /* creates padding around scroll thumb */
+    }
+    .fondo {
+        background-color: #222222;
+        border-radius: 25px;
+        padding: 10px;
+
+    }
+    .fondo_oscuro {
+        background-color: #000000;
+        border-radius: 25px;
+        padding: 10px;
+
+    }
+    .siguiente{
+        color:#ffffff ;
+    }
+    .siguiente:hover {
+        color: #222222;
+    }
+    .company_name{
+        color:#ddfeff ;
+    }
+    .company_name:hover {
+        color: #a1a1a1;
+    }
+    .menu{
+        color:#ffffff ;
+    }
+    .menu:hover {
+        color: #a1a1a1;
+    }
+</style>
+<body>
+    <div style="background-image: url('Images/[000039].jpg');">
+        <div id="ivang" class="col-sm-12 row align-items-center vh-100 justify-content-center "style="padding-left: 90px; ">
+            <div class="col-sm-1 order-2 order-sm-2">
+                <img src="./Images/ImagenBlancoynegro2.jpg" alt="Profile" class="rounded-circle" style="width: 228px; height: 220px;">
+            </div>
+            <div class="col-lg-2 order-1 order-sm-1">
+                <h1 style="color: #ffffff;">Ivan Gomez</h1>
+                <h5 style="color: #e0e0e0; padding-left: 50px; font-family: Cascadia Code;">Game Developer</h5>
+            </div>
+
+        </div>
+        
+        <div id="about-me" class="col-sm-12 row align-items-center vh-100 justify-content-center ">
+
+            <div class="col-sm-4 order-1 order-sm-1">
+                <img src="./Images/UnrealEngine5Logo.png" alt="Profile" class="rounded-0" style="width: 370px; height: 300px;">
+            </div>
+            <div class="col-lg-4 order-2 order-sm-2">
+                <h1 class="about-me"  style="color: #ffffff;">About Me <i class="fas fa-gamepad fa-1x" style="color: #ffffff; padding-left: 20px;"></i></h1>
+                <p style="color: #e0e0e0; font-size: 20px; font-family: Cascadia Code;">Hello! I have been working as a developer for a year and a half, specializing in Unreal Engine 5 as a Gameplay programmer. 
+                I've worked for multiple video game studios, both full-time and freelance. 
+                I have strong knowledge in Object-Oriented Programming (OOP) and structured, modular programming in various languages.</p>
+                
+                <p style="color: #e0e0e0; font-size: 20px; font-family: Cascadia Code;">In my free time I ussually play videogames. play guitar (I can't do anything
+                    without music). I also like to watch series and I love to learn new things.</p>
+
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="work-experience" class="col-sm-12 row align-items-center vh-100 justify-content-center " style="padding-left: 90px; background-image: url('/Images/simulationGameplay2.jpg');">
+        
+        <div class="col-lg-4 order-2 order-sm-2">
+            <h1 class="about-me"  style="color: #ffffff;">Work Experience <i class="fas fa-code  fa-1x" style=" color: #ffffff; padding-left: 20px;"></i></h1>
+            <br>
+            <a class="siguiente" href="#Nihatech_experience" ><i class="fas fa-arrow-alt-circle-down fa-2x" style="margin-left: 150px;"></i></a>
+        </div>
+        <div class="col-lg-4 order-2 order-sm-2">
+
+            <div class="fondo">
+                <br>
+                <h2 style="color: #ffffff; font-family: Cascadia Code;">Aeromexico.</h2>
+                <p style="color: #ffffff; font-family: Cascadia Code;">Freelance</p>
+                <img src="./Images/AeromexicoBlue.png" alt="Profile" class="rounded-circle" style="width: 260px; height: 220px; margin-left: 150px;">
+                <p style="color: #cecece; font-size: 20px; font-family: Cascadia Code;">I worked on a pushback simulator with a team of 5 people, My job was the creation of systems such as weather, game cycle, inputs and outputs using car simulator hardware.</p>
+                <div class="col-sm-2 order-2 order-sm-2">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/it0yddLt_7I?start=83&controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="Nihatech_experience" class="col-sm-12 row align-items-center vh-100 justify-content-center " style="padding-left: 90px; background-image: url('/Images/VRBW.jpg');">
+        <div class="col-lg-4 order-2 order-sm-2">
+            <a class="siguiente" href="#work-experience" ><i class="fas fa-arrow-alt-circle-down fa-rotate-180 fa-2x" style="margin-left: 150px;"></i></a>
+            <br>
+            <h1 class="about-me"  style="color: #ffffff;">Work Experience <i class="fas fa-code  fa-1x" style=" color: #ffffff; padding-left: 20px;"></i></h1>
+            <br>
+            <a class="siguiente" href="#bichisoul-experience" ><i class="fas fa-arrow-alt-circle-down fa-2x" style="margin-left: 150px;"></i></a>
+        
+        </div>
+        <div class="col-lg-4 order-1 order-sm-1">
+
+            <div class="fondo">
+                <br>
+                <h2 style="color: #ffffff; font-family: Cascadia Code;">NIHAYTECH</h2>
+                <p style="color: #ffffff; font-family: Cascadia Code;">Freelance</p>
+                <img src="./Images/NihayLogo.png" alt="Profile" class="" style="width: 400px; height: 100px; margin-left: 50px; margin-top:10px; margin-bottom: 10px;">
+                <p style="color: #cecece; font-size: 20px; font-family: Cascadia Code;" style="margin-left: 20px;">I worked on a VR project with a team of 8 people. My job was as a Gameplay programmer and I successfully created VR mechanics, gameplay cycle, game systems.</p>
+                <div class="col-sm-2 order-2 order-sm-2">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/it0yddLt_7I?start=19&controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bichisoul-experience" class="col-sm-12 row align-items-center vh-100 justify-content-center " style="padding-left: 90px; background-image: url('/Images/BichiSouldBackGround2.jpg');">
+        <div class="col-lg-4 order-1 order-sm-1">
+            <a class="siguiente" href="#Nihatech_experience" ><i class="fas fa-arrow-alt-circle-down fa-rotate-180 fa-2x" style="margin-left: 150px;"></i></a>
+            <br>
+            <h1 class="about-me"  style="color: #ffffff;">Work Experience <i class="fas fa-code  fa-1x" style=" color: #ffffff; padding-left: 20px;"></i></h1>
+        
+        </div>
+        <div class="col-lg-4 order-1 order-sm-1">
+
+            <div class="fondo">
+                <br>
+                <h2 style="color: #ffffff; font-family: Cascadia Code;">Bichi Soul</a></h2>
+                <p style="color: #ffffff; font-family: Cascadia Code;">Freelance</p>
+                <img src="./Images/BichiSoulLogo.jpg" alt="Profile" class="" style="width: 400px; height: 100px; margin-left: 90px; margin-top:10px; margin-bottom: 10px;">
+                <p style="color: #cecece; font-size: 20px; font-family: Cascadia Code;" style="margin-left: 20px;">In 2023 I worked on multiple VR projects as a Game Developer and Software Developer with a team of 7 people. I successfully created a Local Multiplayer Server with multiple users using Meta Quest 2, in other projects I created VR mechanics, game cycle and game systems.</p>
+                <div class="col-sm-2 order-2 order-sm-2">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="projects"class="col-sm-12 row align-items-center vh-100 justify-content-center " style="padding-left: 90px; background-image: url('/Images/ProjectDGame.jpg');">
+        <div class="col-lg-4 order-2 order-sm-2">
+            <h1 class="about-me"  style="color: #ffffff; padding-left: 80px;">Projects <i class="fas fa-code-branch  fa-1x" style=" color: #ffffff; padding-left: 20px;"></i></h1>
+        
+        </div>
+        <div class="col-lg-4 order-1 order-sm-1">
+            <div class="fondo">
+                <br>
+                <h2 style="color: #ffffff; font-family: Cascadia Code;">Project D</h2>
+                <img src="./Images/ProjectDLogo.png" alt="Profile" class="" style="width: 350px; height: 250px; margin-left: 50px; margin-left:100px;">
+                <p style="color: #cecece; font-size: 20px; font-family: Cascadia Code;" style="margin-left: 20px;">Project D is a fan game inspired by the anime Initial D, my role was to create the car functionality and mechanics like drifting and systems like sound implementation.</p>
+                <div class="col-sm-2 order-2 order-sm-2">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/71XUKkundp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="education" class="col-sm-12 row align-items-center vh-100 justify-content-center " style="padding-left: 90px; background-image: url('/Images/UnrealWallpaper.jpg');">
+        <div class="col-lg-12 align-items-center justify-content-center" style="padding-left: 600px;">
+            <h1 class="about-me"  style="color: #ffffff;  ">Education and Certificates <i class="fas fa-book-open  fa-1x" style=" color: #ffffff; padding-left: 20px;"></i></h1>
+        </div>
+        <div class="col-lg-3 order-1 order-sm-1" style="margin-bottom: 200px;">
+
+                <h4 style="color: #ffffff; font-family: Cascadia Code;">Universidad <br>De Guadalajara</h2>
+                <p style="color: #ffffff; font-family: Cascadia Code;">Computer Engineering</p>
+                <img src="./Images/Logo_UDG.png" alt="Profile" class="" style="width: 150px; height: 150px; margin-left: 20px;  margin-bottom: 10px;">
+                <p style="color: #cecece; font-size: 20px; font-family: Cascadia Code;" style="margin-left: 20px;">2019</p>
+        </div>
+
+        <div class="col-lg-3 order-1 order-sm-1"style="margin-bottom: 190px;">
+                <h4 style="color: #ffffff; font-family: Cascadia Code;">Microsoft & <br>FreeCodeCamp</h2>
+                <p style="color: #ffffff; font-family: Cascadia Code;">Foundational C#</p>
+                <img src="./Images/MicrosoftAndFreeCodeCampCourse.jpg" alt="Profile" class="" style="width: 200px; height: 150px; margin-bottom: 10px;">
+                <a href="https://www.freecodecamp.org/certification/IvanDev/foundational-c-sharp-with-microsoft" target="_blank" style="text-decoration: none;font-size: 20px;"><p class="company_name" style="font-family: Cascadia Code; padding-left: 10px;">Show Credential</p></a>
+        </div>
+        <div class="col-lg-3 order-1 order-sm-1"style="margin-bottom: 200px;">
+                <h4 style="color: #ffffff; font-family: Cascadia Code;">Arden asociacion civil</h2>
+                <p style="color: #ffffff; font-family: Cascadia Code;">Unreal Engine 5 General Training</p>
+                <img src="./Images/UETCUETRAINING.jpg" alt="Profile" class="" style="width: 140px; height: 180px; margin-left: 70px;  margin-bottom: 10px;">
+                <a href="https://www.linkedin.com/in/ivan-gomez-89ba12276/" target="_blank" style="text-decoration: none;font-size: 20px;"><p class="company_name" style="font-size: 20px; font-family: Cascadia Code; padding-left: 90px;">Linkedin</p></a>
+        </div>
+
+        <div class="col-lg-3 order-1 order-sm-1"style="margin-bottom: 200px;">
+                <h4 style="color: #ffffff; font-family: Cascadia Code;">Arden asociacion civil</h2>
+                <p style="color: #ffffff; font-family: Cascadia Code;">Unreal Engine 5 VFX Training</p>
+                <img src="./Images/UETCUETRAINING2.jpg" alt="Profile" class="" style="width: 140px; height: 180px; margin-left: 70px;  margin-bottom: 10px;">
+                <a href="https://www.linkedin.com/in/ivan-gomez-89ba12276/" target="_blank" style="text-decoration: none;font-size: 20px;"><p class="company_name" style="font-size: 20px; font-family: Cascadia Code; padding-left: 90px;">Linkedin</p></a>
+        </div>
+
+    </div>
+    <div id="contactme"class="col-sm-12 row align-items-center vh-100 justify-content-center " style="padding-left: 150px; background-image: url('/Images/contactme.jpg');">
+        
+        <div class="col-lg-4 order-1 order-sm-1">
+            <h1 class="about-me"  style="color: #ffffff; padding-left: 80px; padding-bottom: 90px;">Contact Me <i class="fas fa-phone  fa-1x" style=" color: #ffffff; padding-left: 20px;"></i></h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <p class="siguiente" id="email" style="margin-right: 20px;"><i class="fas fa-envelope fa-3x" style="padding-left: 50px;" onclick="copyToClipboard()"></i><br> </p>
+                        <div id="copyAlert" style="display: none;">Copy to clipboard</div>
+                    </div>
+                    <div class="col-sm-3">
+                        <a class="siguiente" href="https://github.com/IvanGQDev" target="_blank"><i class="fab fa-github fa-3x" ></i></a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a class="siguiente" href="https://www.linkedin.com/in/ivan-gomez-89ba12276/" target="_blank"><i class="fab fa-linkedin fa-3x" ></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript-->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
